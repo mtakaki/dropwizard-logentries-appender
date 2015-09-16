@@ -19,10 +19,8 @@ import io.dropwizard.logging.AppenderFactory;
 
 /**
  * An {@link AppenderFactory} implementation which provides an appender that
- * writes events to Logentries service.
- * <p/>
- * <b>Configuration Parameters:</b>
- * <table>
+ * writes events to Logentries service. <b>Configuration Parameters:</b>
+ * <table summary="The configuration parameters and its meanings.">
  * <tr>
  * <td>Name</td>
  * <td>Default</td>
@@ -57,15 +55,33 @@ import io.dropwizard.logging.AppenderFactory;
  * </tr>
  * <tr>
  * <td>{@code dataHubPort}</td>
+ * <td><b>REQUIRED</b> if {@code useDataHub} is {@code true}.</td>
  * <td>The port for the data hub host.</td>
  * </tr>
  * <tr>
  * <td>{@code location}</td>
+ * <td></td>
  * <td>The location information.</td>
- * <td>
- * The Logback pattern with which events will be formatted. See <a
- * href="http://logback.qos.ch/manual/layouts.html#conversionWord">the Logback
- * documentation</a> for details.</td>
+ * </tr>
+ * <tr>
+ * <td>{@code logHostName}</td>
+ * <td>{@code false}</td>
+ * <td>Will determine if the host name should be logged or not.</td>
+ * </tr>
+ * <tr>
+ * <td>{@code hostName}</td>
+ * <td></td>
+ * <td>The host name.</td>
+ * </tr>
+ * <tr>
+ * <td>{@code logId}</td>
+ * <td></td>
+ * <td>The log id.</td>
+ * </tr>
+ * <tr>
+ * <td>{@code httpPut}</td>
+ * <td></td>
+ * <td>Will use HTTP PUT verb, instead of a POST.</td>
  * </tr>
  * </table>
  *
@@ -94,7 +110,7 @@ public class LogentriesAppenderFactory extends AbstractAppenderFactory {
     @Override
     public Appender<ILoggingEvent> build(final LoggerContext context, final String applicationName,
             final Layout<ILoggingEvent> layout) {
-        this.appender = this.buildLogentriesAppender();
+        this.appender = new LogentriesAppender();
         this.appender.setToken(this.token);
         // Unfortunately logentries doesn't support SSL.
         this.appender.setSsl(false);
@@ -118,34 +134,4 @@ public class LogentriesAppenderFactory extends AbstractAppenderFactory {
 
         return this.wrapAsync(this.appender, context);
     }
-
-    protected LogentriesAppender buildLogentriesAppender() {
-        return new LogentriesAppender();
-    }
-
-//    /**
-//     * Creates the LogentriesAppender, setting all the configuration parameters.
-//     *
-//     * @param context
-//     *            The log context.
-//     */
-//    protected void buildLogentriesAppender(final LoggerContext context) {
-//        this.appender = new LogentriesAppender();
-//        this.appender.setToken(this.token);
-//        // Unfortunately logentries doesn't support SSL.
-//        this.appender.setSsl(false);
-//        this.appender.setContext(context);
-//        this.appender.setName("logentries");
-//
-//        if (this.useDataHub) {
-//            this.appender.setIsUsingDataHub(this.useDataHub);
-//            this.appender.setDataHubAddr(this.dataHubAddress);
-//            this.appender.setDataHubPort(this.dataHubPort);
-//            this.appender.setLocation(this.location);
-//            this.appender.setLogHostName(this.logHostName);
-//            this.appender.setHostName(this.hostName);
-//            this.appender.setLogID(this.logId);
-//            this.appender.setHttpPut(this.httpPut);
-//        }
-//    }
 }
