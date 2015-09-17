@@ -31,11 +31,12 @@
     </distributionManagement>
 
     <dependencies>
-        <!-- Dropwizard packages -->
+        <!-- Dropwizard logging package -->
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-logging</artifactId>
             <version>${dropwizard.version}</version>
+            <optional>true</optional>
         </dependency>
 
         <!-- Logentries library to push our logs to their service -->
@@ -71,6 +72,7 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <version>1.10.19</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
