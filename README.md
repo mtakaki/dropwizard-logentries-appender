@@ -17,7 +17,7 @@ This library is available at central maven, so you only need to add this to your
   <dependency>
     <groupId>com.github.mtakaki</groupId>
     <artifactId>logentries-appender</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
   </dependency>
 </dependencies>
 ```
