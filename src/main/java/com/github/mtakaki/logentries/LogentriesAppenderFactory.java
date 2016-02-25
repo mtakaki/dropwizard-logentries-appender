@@ -1,21 +1,21 @@
-package com.mtakaki.logentries;
+package com.github.mtakaki.logentries;
 
 import java.util.TimeZone;
 
 import javax.validation.constraints.NotNull;
-
-import lombok.Getter;
-import lombok.Setter;
-import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.spi.ILoggingEvent;
-import ch.qos.logback.core.Appender;
-import ch.qos.logback.core.Layout;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.logentries.logback.LogentriesAppender;
 
 import io.dropwizard.logging.AbstractAppenderFactory;
 import io.dropwizard.logging.AppenderFactory;
+
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.Appender;
+import ch.qos.logback.core.Layout;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * An {@link AppenderFactory} implementation which provides an appender that
@@ -95,6 +95,7 @@ public class LogentriesAppenderFactory extends AbstractAppenderFactory {
 
     @NotNull
     private String token;
+    private boolean useSSL;
     @NotNull
     private TimeZone timeZone = TimeZone.getTimeZone("UTC");
     // Datahub specific settings.
@@ -112,8 +113,7 @@ public class LogentriesAppenderFactory extends AbstractAppenderFactory {
             final Layout<ILoggingEvent> layout) {
         this.appender = new LogentriesAppender();
         this.appender.setToken(this.token);
-        // Unfortunately logentries doesn't support SSL.
-        this.appender.setSsl(false);
+        this.appender.setSsl(this.useSSL);
         this.appender.setContext(context);
         this.appender.setName("logentries");
 

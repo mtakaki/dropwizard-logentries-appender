@@ -1,4 +1,4 @@
-package com.mtakaki.logentries;
+package com.github.mtakaki.logentries;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -15,6 +15,7 @@ import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.Layout;
 
+import com.github.mtakaki.logentries.LogentriesAppenderFactory;
 import com.logentries.logback.LogentriesAppender;
 import com.logentries.net.AsyncLogger;
 
