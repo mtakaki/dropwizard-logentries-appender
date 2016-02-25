@@ -1,5 +1,5 @@
 ### Status
-[![Build Status](https://travis-ci.org/mtakaki/dropwizard-logentries-appender.svg?branch=master)](https://travis-ci.org/mtakaki/dropwizard-logentries-appender)
+![Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
 [ ![Download](https://api.bintray.com/packages/mtakaki/maven/logentries-appender/images/download.svg) ](https://bintray.com/mtakaki/maven/logentries-appender/_latestVersion)
 
 # Dropwizard Logentries Log Appender
@@ -10,28 +10,14 @@ This project provides integration of [logentries](https://logentries.com) log ap
 This library currently supports dropwizard version `0.8.2`.
 
 ## Maven Configuration
-In order to add this functionality to your dropwizard project, you will need to add reference to this library:
+This library is available at central maven, so you only need to add this to your dependencies:
 
-```
-...
-<repositories>
-  <repository>
-     <id>bintray</id>
-     <url>http://dl.bintray.com/mtakaki/maven</url>
-     <releases>
-       <enabled>true</enabled>
-     </releases>
-     <snapshots>
-       <enabled>false</enabled>
-     </snapshots>
-   </repository>
-</repositories>
-...
+```java
 <dependencies>
   <dependency>
-    <groupId>com.mtakaki</groupId>
+    <groupId>com.github.mtakaki</groupId>
     <artifactId>logentries-appender</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
   </dependency>
 </dependencies>
 ```
@@ -39,7 +25,7 @@ In order to add this functionality to your dropwizard project, you will need to 
 ## Dropwizard Configuration
 Without data hub:
 
-```
+```yaml
 logging:
   level: INFO
   appenders:
@@ -50,7 +36,7 @@ logging:
 
 If data hub is used:
 
-```
+```yaml
 logging:
   level: INFO
   appenders:
