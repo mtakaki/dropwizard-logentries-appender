@@ -1,5 +1,5 @@
 ### Status
-[Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
+![Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
 [ ![Download](https://api.bintray.com/packages/mtakaki/maven/logentries-appender/images/download.svg) ](https://bintray.com/mtakaki/maven/logentries-appender/_latestVersion)
 
 # Dropwizard Logentries Log Appender
