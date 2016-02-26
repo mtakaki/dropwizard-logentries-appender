@@ -1,6 +1,6 @@
 ### Status
 ![Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
-[ ![Download](https://api.bintray.com/packages/mtakaki/maven/logentries-appender/images/download.svg) ](https://bintray.com/mtakaki/maven/logentries-appender/_latestVersion)
+[![Download](https://maven-badges.herokuapp.com/maven-central/com.github.mtakaki/logentries-appender/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mtakaki/logentries-appender)
 
 # Dropwizard Logentries Log Appender
 This project provides integration of [logentries](https://logentries.com) log appender to [dropwizard](http://www.dropwizard.io/) framework, so it can be referenced in dropwizard's configuration YML.
