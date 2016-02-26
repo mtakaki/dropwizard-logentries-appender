@@ -1,5 +1,5 @@
 ### Status
-![Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
+[Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
 [ ![Download](https://api.bintray.com/packages/mtakaki/maven/logentries-appender/images/download.svg) ](https://bintray.com/mtakaki/maven/logentries-appender/_latestVersion)
 
 # Dropwizard Logentries Log Appender
@@ -7,7 +7,7 @@ This project provides integration of [logentries](https://logentries.com) log ap
 
 [Project lombok](https://projectlombok.org/) was used to auto-generate the getter and setters, so you will need to have lombok plugin installed in your eclipse/intellij if you want to import the source code.
 
-This library currently supports dropwizard version `0.8.2`.
+This library currently supports dropwizard version `0.9.2`.
 
 ## Maven Configuration
 This library is available at central maven, so you only need to add this to your dependencies:

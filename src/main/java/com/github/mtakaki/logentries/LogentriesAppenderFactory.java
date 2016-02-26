@@ -74,6 +74,11 @@ import lombok.Setter;
  * <td>The host name.</td>
  * </tr>
  * <tr>
+ * <td>{@code useSSL}</td>
+ * <td>{@code false}</td>
+ * <td>If it should SSL when pushing the logs.</td>
+ * </tr>
+ * <tr>
  * <td>{@code logId}</td>
  * <td></td>
  * <td>The log id.</td>
