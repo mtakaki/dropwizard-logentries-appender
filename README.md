@@ -1,5 +1,6 @@
 ### Status
 ![Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
+[![Coverage Status](https://coveralls.io/repos/mtakaki/dropwizard-logentries-appender/badge.svg?branch=master&service=github)](https://coveralls.io/github/mtakaki/dropwizard-logentries-appender?branch=master)
 [![Download](https://maven-badges.herokuapp.com/maven-central/com.github.mtakaki/logentries-appender/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mtakaki/logentries-appender)
 
 # Dropwizard Logentries Log Appender
