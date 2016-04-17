@@ -1,6 +1,7 @@
 ### Status
 ![Build Status](https://codeship.com/projects/c895ce00-bdce-0133-0ed3-2a1d867cc1c8/status?branch=master)
 [![Coverage Status](https://coveralls.io/repos/mtakaki/dropwizard-logentries-appender/badge.svg?branch=master&service=github)](https://coveralls.io/github/mtakaki/dropwizard-logentries-appender?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/80402d0e0f764dc29670e50d2418eee5)](https://www.codacy.com/app/mitsuotakaki/dropwizard-logentries-appender)
 [![Download](https://maven-badges.herokuapp.com/maven-central/com.github.mtakaki/logentries-appender/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mtakaki/logentries-appender)
 [![Javadoc](https://javadoc-emblem.rhcloud.com/doc/com.github.mtakaki/logentries-appender/badge.svg)](http://www.javadoc.io/doc/com.github.mtakaki/logentries-appender)
 
